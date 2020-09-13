@@ -1,0 +1,29 @@
+
+body {
+	overflow-x: hidden;
+	font-size: 100%;
+}
+
+.container {
+	max-width: $width; 
+	width: 100%;
+	padding: 0 $padding-container;
+	margin: 0 auto;
+	position: relative;
+	@include box-sizing;
+	@include clear;
+}
+
+.box-section {
+	width: 100%;
+	position: relative;
+	padding: $padding-section 0;
+	@include box-sizing;
+	@include clear;
+}
+
+.content-txt {
+	width: 100%;
+	margin: 0 auto;
+	display: block; 
+}

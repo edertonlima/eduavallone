@@ -1,0 +1,333 @@
+/*
+ *  cadastro de pets
+ */
+
+.cadastro-pets {
+	.header-btn {
+		width: 100%;
+		display: flex; 
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+
+		position: fixed;
+		top: 0px;
+		left: 0;
+		padding: 20px;
+		z-index: 99;
+		background-color: #ffffff;
+		@include box-sizing;
+		//display: block;
+		//text-align: center;
+
+		.btn {
+			width: 100%;
+			margin: 0 3.5px;
+			
+			&:first-child {
+				margin-left: 0;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		@media all and (max-width: 1100px){
+			.btn {
+				text-indent: -1000px;
+				overflow: hidden;
+				height: 6px;
+				padding: 0;
+			}
+		}
+	}
+
+	.content-txt {
+		max-width: 532px;
+	}
+
+	form {
+		margin-top: 32px;
+
+		.btn-voltar {
+			margin: 32px auto 0;
+			text-align: center;
+			width: 70px;
+		}
+	}
+
+	.group-tipo-pet {
+		margin: 15px auto 45px;
+		width: 100%;
+
+		//display: flex;
+		//justify-content: center;
+		//flex-direction: row;	
+
+		display: block;
+		text-align: center;
+
+		div {
+			display: inline-block;
+		}
+	}
+
+	.tipo-pet {
+		width: 150px;
+		height: 150px;
+		margin: 20px;
+		background-color: #ffffff;
+		border-radius: 16px;
+		cursor: pointer;
+		box-shadow: 0px 12px 48px -20px rgba(177, 177, 201, 0.8);
+		border: 3px solid transparent;
+
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+
+		@include animacao;
+
+		input {
+			display: none;
+		}
+
+		img {
+
+		}
+
+		span {
+			font-weight: $extra-bold;
+			font-size: 20px;
+			margin-top: 15px;
+			color: $cor-txt;
+
+			&.legenda {
+				font-weight: $regular;
+				font-size: 14px;
+				color: $cor-txt-claro;
+				margin-top: 10px;
+			}
+		}
+
+		&.active {
+			border-color: $cor-txt;
+		}
+	}
+
+	.group-peso-pet {
+		margin: 0px auto 0px;
+		width: 100%;
+		display: block;
+		text-align: center;
+
+		.peso-pet {
+			padding: 20px;
+			display: inline-block;
+			width: 242px;
+			height: 133px;
+			margin: 20px auto;
+			background-color: #ffffff;
+			border-radius: 16px;
+			box-shadow: 0px 12px 48px -20px rgba(177, 177, 201, 0.8);
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			justify-content: center;
+
+			@include box-sizing;
+			@include animacao;
+
+			span {
+				font-weight: $extra-bold;
+				font-size: 48px;
+				line-height: 38px;
+				color: $cor-txt;
+
+				&.legenda {
+					font-size: 20px;
+				}
+			}
+
+			input.val-peso-pet {
+				font-weight: $extra-bold;
+				font-size: 48px;
+				line-height: 38px;
+				color: $cor-txt;
+				border: none;
+				text-align: center;
+			}
+
+			&.input-peso {
+				height: 63px;
+				margin-bottom: 42px;
+			}
+		}
+	}
+
+	&.cadastro-pets-vacinas {
+		form {
+			max-width: 1120px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		.input-checkbox-vacina {
+			margin-bottom: 20px;
+			position: relative;		
+
+			label { 
+				.box-input-radio {
+					max-width: 100%;
+					width: 100%;
+					height: 64px;
+					border: 1px solid $cor-border;
+					border-radius: 8px;
+					padding: 0px 32px;
+					cursor: pointer;
+
+					display: flex;
+					align-items: center;
+					
+					@include box-sizing;
+					@include animacao;
+				}
+
+				input {
+					display: none;
+				}
+
+				.input {
+					width: 24px;
+					height: 24px;
+					background-color: #ffffff;
+					margin-right: 15px;
+					border: 1px solid $cor-border;
+					border-radius: 50%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					@include animacao;
+
+					&:after {
+						opacity: 0;
+						content: '';
+						width: 11px;
+						height: 8px;
+						background-image: url("data:image/svg+xml,%3Csvg width='11' height='8' viewBox='0 0 11 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 1L3.8125 7L1 4.27273' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+						display: block;
+					}
+				}
+
+				.label, .data {
+					font-family: $font-family;
+					font-weight: $regular;
+					@include animacao;
+				}
+
+				.label {
+					font-size: 16px;
+					color: $cor-txt;
+				}
+
+				.data {
+					margin-left: auto;
+					background-color: $cor-verde;
+					color: #ffffff;
+					height: 24px;
+					padding: 0 12px;
+					font-size: 14px;
+					line-height: 24px;
+					border-radius: 100px;
+					opacity: 0;
+				}
+
+				input:checked ~ .box-input-radio {
+					border-color: $cor-verde;
+					background-color: rgba($cor-verde, .25);
+
+					.input {
+						border-color: $cor-verde;
+						background-color: $cor-verde;
+
+						&:after {
+							opacity: 1;
+						}
+					}
+
+					.label {
+						color: $cor-verde;
+					}
+
+					.data {
+						opacity: 1;
+					}
+				}
+			}
+
+			&:hover {
+				.info-vacina {
+					display: block;
+				}
+			}
+		}
+
+		.info-vacina {
+			display: none;
+			width: auto;
+			max-width: 410px;
+			padding: 15px 25px;
+			background-color: #fff;
+			border-radius: 4px;
+			font-size: 14px;
+			line-height: 18px;
+			font-weight: $regular;
+			color: $cor-txt;
+			text-align: center;
+			@include box-sizing;
+
+			border: 1px solid $cor-border;
+
+			position: absolute;
+			transform: translateY(-100%);
+			top: -16px;
+
+			&:after {
+				content: '';
+				height: 15px;
+				width: 15px;
+				background-color: #ffffff;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				border-radius: 3px;
+
+				border: 1px solid $cor-border;
+				border-width: 0 1px 1px 0;
+
+				transform: translate(-50%,50%) rotate(45deg)
+			}
+		}
+
+		.btn-margin {
+			margin-top: 32px;
+		}
+	}
+}
+
+.logo-manual-pets {
+	margin: 50px 0;
+	text-align: center;
+
+	img {
+		margin: 0 auto;
+		display: block;
+		width: 112px;
+	}
+}
+
+/*
+ *  fim cadastro de pets
+ */

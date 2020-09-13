@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;700&family=Dancing+Script:wght@700&display=swap");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, img, abbr, acronym, address, big, cite, code, hr, del, dfn, font, ins, kbd, q, s, samp, small, strike, tt, var, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, select, input, button, textarea, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  text-decoration: none;
+  outline: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+li {
+  list-style: none; }
+
+em {
+  text-decoration: italic; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+.cor-principal {
+  color: #E1E1F1; }
+
+.cor-secundario {
+  color: #19AAE3; }
+
+body {
+  overflow-x: hidden;
+  font-size: 100%; }
+
+.container {
+  max-width: 1366px;
+  width: 100%;
+  padding: 0 40px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both; }
+  .container:before, .container:after {
+    display: table;
+    content: ''; }
+  .container:after {
+    clear: both; }
+
+.box-section {
+  width: 100%;
+  position: relative;
+  padding: 120px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  clear: both; }
+  .box-section:before, .box-section:after {
+    display: table;
+    content: ''; }
+  .box-section:after {
+    clear: both; }
+
+.content-txt {
+  width: 100%;
+  margin: 0 auto;
+  display: block; }
+
+.row {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  clear: both;
+  margin-right: -20px;
+  margin-left: -20px; }
+  .row:before, .row:after {
+    display: table;
+    content: ''; }
+  .row:after {
+    clear: both; }
+  .row [class*="col-"] {
+    padding-right: 20px;
+    padding-left: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .row .col-1 {
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+    flex-grow: 1; }
+  .row .col-2 {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+    flex-grow: 2; }
+  .row .col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    flex-grow: 3; }
+  .row .col-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    flex-grow: 4; }
+  .row .col-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+    flex-grow: 5; }
+  .row .col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    flex-grow: 6; }
+  .row .col-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+    flex-grow: 7; }
+  .row .col-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+    flex-grow: 8; }
+  .row .col-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+    flex-grow: 9; }
+  .row .col-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+    flex-grow: 10; }
+  .row .col-11 {
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+    flex-grow: 11; }
+  .row .col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    flex-grow: 12; }
+  .row .row {
+    margin-right: -10px;
+    margin-left: -10px; }
+    .row .row [class*="col-"] {
+      padding-right: 10px;
+      padding-left: 10px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
