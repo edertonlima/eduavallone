@@ -103,6 +103,12 @@
     }
 }
 
+@mixin media($value) {
+	@media all and(max-width: #{$value}px) {
+		@content
+	}
+}
+
 @mixin placeholder {
 	&::-webkit-input-placeholder {@content}
 	&:-moz-placeholder           {@content}

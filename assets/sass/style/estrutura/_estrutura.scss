@@ -2,11 +2,14 @@
 body {
 	overflow-x: hidden;
 	font-size: 100%;
+	font-family: $font-family;
+	color: $cor-txt;
 }
 
 .container {
 	max-width: $width; 
 	width: 100%;
+	height: 100%;
 	padding: 0 $padding-container;
 	margin: 0 auto;
 	position: relative;
@@ -25,5 +28,28 @@ body {
 .content-txt {
 	width: 100%;
 	margin: 0 auto;
-	display: block; 
+	display: flex;
+	flex-direction: column;
+	padding: 0 80px;
+	@include box-sizing;
+
+	@include media(1280){
+		padding: 0 40px;
+	}
+
+	@include media(1080){
+		padding: 0;
+	}
+
+	a:not(.btn) {
+		text-decoration: underline;
+	}
+
+	p {
+		padding-bottom: 30px;
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
 }

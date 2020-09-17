@@ -1,46 +1,54 @@
-
-/* ELEMENTOS */
-
 body * {
-	font-family: $font-family;
-	font-size: $font-size;
-	color: $cor-txt-claro;
+	color: $cor-txt;
 	font-weight: $regular;
+	font-size: $font-size;
+	line-height: $font-size+.5rem;
 }
 
-h1 {
-	font-family: $font-titulo;
-	font-size: 28px;
-	line-height: 36px;
-	color: $cor-txt;
+strong, b {
 	font-weight: $bold;
+}
+
+h1, h2, h1 span {
+	font-size: 5.625rem;
+	line-height: 5.625rem + .5rem;
+	color: $cor1;
+	font-weight: $bold;
+
+	a {
+
+	}
 }
 
 h2 {
-	font-weight: $extra-bold;
-	font-size: 20px;
-	line-height: normal;
-	color: $cor-txt;
-	margin-top: 32px;
+
 }
 
 h3 {
-	font-family: $font-titulo;
-	font-size: 28px;
-	line-height: 36px;
-	color: $cor-txt;
-	font-weight: $bold;
-	margin: 32px 0;
+
 }
 
 p {
-	margin-top: 32px;
-	line-height: 28px;
-	font-size: 16px;
+	display: block;
+	font-weight: $light;
+
+	&.text-subtitulo {
+		font-size: 2.5rem;
+		line-height: 3rem;
+	}
 }
 
-.center {
-	text-align: center;
-}
+a {
+	text-decoration: none;
+	@include animacao;
 
-/* FIM - ELEMENTOS */
+	&.underline {
+		text-decoration: underline;
+	}
+
+	&.inline {
+		&:hover {
+			text-decoration: underline;
+		}	
+	}
+}

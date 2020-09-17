@@ -1,23 +1,18 @@
-/*
- *  button
- */
-
 .btn {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
 	text-decoration: none;
-
-	font-weight: $medium;
-	border: 1px solid $cor-txt;
-	background-color: #ffffff;
-	color: $cor-txt;
-	border-radius: 4px;
-	padding: 0 10px;
-	height: 56px;
+	border: 2px solid $cor-txt;
+	background-color: $cor-txt;
+	color: #ffffff;
+	border-radius: 10px;
+	padding: 0 30px;
+	height: 61px;
 	line-height: normal;
-	font-size: 16px;
+	font-size: 1.5rem;
+	margin-right: auto;
 	@include box-sizing;
 	@include animacao;
 
@@ -28,101 +23,11 @@
 	&:disabled {
 		cursor: default;
 		background-color: $cor-border!important;
-		color: $cor-btn-disabled!important;
+		color: rgba($cor-border, .5)!important;
 		border-color: $cor-border!important;
 	}
 
-	&.btn-data {
-		color: $secundario;
-		background-color: rgba($secundario, .1);
-		border-color: transparent;
-
-		&:hover {
-			background-color: rgba($secundario, .2);
-		}
-	}
-
-	&.btn-file {
-		border-color: rgba($cor-txt, .2);
-		height: 50px;
-		margin: 22px 0 18px;
-
-		&:hover {
-			background-color: rgba($cor-cinza-logo, .2);
-		}
-	}
-
-	&.btn-menu-cadastro {
-		background-color: #fdf4e5;
-		//background-color: rgba($cor-laranja, .1);
-		color: $cor-laranja;
-		font-weight: $bold;
-		border-color: transparent;
-		font-size: 12px;
-		height: 32px;
-
-		@media all and (max-width: 1100px){
-			background-color: $cor-laranja;
-		}
-
-		&:disabled {
-			color: $cor-btn-disabled;
-			background-color: #e8e8e8;
-			//background-color: rgba($cor-cinza-logo, .25);
-		}
-
-		&:hover:not(:disabled) {
-			background-color: #fcefd9;
-			//background-color: rgba($cor-laranja, .15);
-		}
-	}
-
 	&.btn-full {
-		width: 100%;
-	}
-
-	&.btn-principal {
-		background-color: $principal;
-		border-color: $principal;
-		color: #ffffff;
-
-		&:hover {
-			background-color: darken($principal, 10%); 
-			border-color: darken($principal, 10%); 
-		}
-	}
-
-	&.btn-secundario {
-		background-color: $secundario;
-		border-color: $secundario;
-		color: #ffffff;
-
-		&:hover {
-			background-color: darken($secundario, 10%); 
-			border-color: darken($secundario, 10%); 
-		}
-	}
-
-	&.btn-inline {
-		background-color: transparent;
-		border: none;
-		color: $cor-txt-claro;
-		font-weight: $regular;
-		height: auto;
-		line-height: normal;
-
-		&:hover {
-			color: $cor-txt;
-		}
-
-		&.cor-secundario {
-			color: $secundario;
-		}
+		width: 100%; 
 	}
 }
-
-/*
- *  fim button
- */
-
- 
