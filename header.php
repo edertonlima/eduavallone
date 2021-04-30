@@ -17,22 +17,30 @@
 
 	<title></title>
 
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css" media="screen" />
 
-	<?php //wp_head(); ?>
+	<?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 
 	<header class="header">
 		<nav class="nav nav-principal">
 			<div class="container">
-				<h1><a href="#">Edu Avallone</a></h1>
+				<div class="logo"><a href="<?php echo get_home_url(); ?>">Edu Avalone</a></div>
 				
 				<ul class="align-right">
-					<li class="ativo"><a href="#">biografia</a></li>
-					<li><a href="#">notícias</a></li>
-					<li><a href="#">mídia</a></li>
-					<li><a href="#">contato</a></li>
+					<li class="<?php if(is_page('biografia')){ echo 'ativo'; } ?>">
+						<a href="<?php echo get_permalink(get_page_by_path('biografia')); ?>" title="biografia">biografia</a>
+					</li>
+					<li class="<?php if(get_post_type() == 'post'){ echo 'ativo'; } ?>">
+						<a href="<?php echo get_home_url(); ?>/noticias">notícias</a>
+					</li>
+					<li class="<?php if(get_post_type() == 'midias'){ echo 'ativo'; } ?>">
+						<a href="<?php echo get_home_url(); ?>/midias">mídia</a>
+					</li>
+					<li class="<?php if(is_page('contato')){ echo 'ativo'; } ?>">
+						<a href="#">contato</a>
+					</li>
 				</ul>
 
 				<div class="menu-mobile" id="nav-icon2">
@@ -44,10 +52,13 @@
 					<span></span>
 				</div>
 			</div>
-		</nav>		
+		</nav>
+	</header>
 
+	<?php if(is_front_page()){ ?>
 		<nav class="nav nav-social">
 			<div class="container">
+				
 				<div class="social social-redes">
 					<span class="item"><span>fique por dentro</span></span>
 					<span class="item"><a href="#"><i class="fab fa-facebook-f"></i></a></span>
@@ -71,7 +82,8 @@
 							<a href=""><i class="fab fa-whatsapp"></i>(14) 99777-1045</a>
 						</span>
 					</span>
-				</div>
+				</div>		
+				
 			</div>
 		</nav>
-	</header>
+	<?php } ?>

@@ -25,7 +25,9 @@ h2 {
 }
 
 h3 {
-
+	font-size: 2.7rem;
+	line-height: 2.7rem + .5rem;
+	font-weight: $bold;
 }
 
 p {
@@ -35,6 +37,13 @@ p {
 	&.text-subtitulo {
 		font-size: 2.5rem;
 		line-height: 3rem;
+		margin: 20px auto 0;
+		max-width: 80%;
+	}
+
+	&.destaque {
+		max-width: 600px;
+		margin-top: 0;
 	}
 }
 
@@ -50,5 +59,13 @@ a {
 		&:hover {
 			text-decoration: underline;
 		}	
+	}
+}
+
+img {
+	&.img-block{
+		display: block;
+		max-width: 100%;
+		width: 100%;
 	}
 }

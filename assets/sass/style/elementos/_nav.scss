@@ -1,8 +1,6 @@
 .nav {
 	width: 100%;
 	display: flex;
-	top: 0px;
-	right: 0px;
 	@include animacao;
 
 	.container {
@@ -47,10 +45,9 @@
 }
 
 .nav-principal {
-	position: fixed;
 	margin-left: auto;
-	padding: 50px 0 0px;
-	z-index: 9999;
+	//padding: 50px 0 0px;
+	padding: 20px 0;
 
 	@include media(920){
 		ul {
@@ -74,21 +71,27 @@
 }	
 
 .nav-social {
-	position: absolute;
-	top: 150px;
-	z-index: 9998;
+	&:not(.nav-social-footer){
+		position: absolute;
+		top: 150px;
+		z-index: 9998;
 
-	@include media(1250){
-		position: fixed;
-		right: -100%;
+		@include media(1250){
+			position: fixed;
+			right: -100%;
 
-		&.active {
-			right: 0px;
+			&.active {
+				right: 0px;
+			}
 		}
-	}
 
-	@include media(920){
-		margin-top: 80px;
+		@include media(920){
+			margin-top: 80px;
+		}
+
+		.item {
+			background-color: rgba(#ffffff, .75);
+		}
 	}
 
 	.container {
@@ -107,7 +110,6 @@
 	}
 
 	.item {
-		background-color: rgba(#ffffff, .75);
 		height: 60px;
 		display: flex;
 		align-items: center;

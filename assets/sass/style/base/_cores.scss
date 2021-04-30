@@ -18,3 +18,10 @@
 		}
 	}
 }
+
+// background-color
+@each $color, $value in $colors {
+	.bg-#{$color} {
+		background-color: $value;
+	}
+}
