@@ -43,12 +43,12 @@
 	@include animacao;
 
 	a {
-		padding: 100px 50px 0;
+		padding: 100px 50px 50px;
 		position: relative;
 		z-index: 1;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: flex-end;
 		height: 100%;
 		@include box-sizing;
 	}
@@ -66,7 +66,8 @@
 	}
 
 	.data {
-		width: 140px;
+		width: 145px;
+		text-align: center;
 		font-size: 1.5rem;
 		color: #ffffff;
 		padding: 15px 35px;
@@ -94,6 +95,8 @@
 
 	p {
 		color: #ffffff;
+		max-height: 89px;
+		overflow: hidden;
 	}
 
 	&:hover {
